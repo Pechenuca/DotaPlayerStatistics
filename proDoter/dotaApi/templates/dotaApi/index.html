@@ -1,0 +1,6 @@
+<h1>Write Down some api data</h1>
+<form action="/api/set_api_data/" method="post">
+    {% csrf_token %}
+    <input name="api_data" type="text" />
+    <input type="submit" />
+</form>

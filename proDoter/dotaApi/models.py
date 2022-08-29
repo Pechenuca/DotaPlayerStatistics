@@ -16,9 +16,9 @@ class Match(models.Model):
         return self.match_id, self.result, self.game_mode, self.duration, self.kills, self.deaths, self.assists
 
 class Player(models.Model):
-    name = models.CharField(max_length=100, default=1)
-    matches = models.ForeignKey(Match, on_delete=models.CASCADE)
-    rank = models.CharField(max_length=10)
+    name = models.JSONField()
+    # matches = models.ForeignKey(Match, on_delete=models.CASCADE)
+    # rank = models.CharField(max_length=10)
 
     def __str__(self):
         return self.name, self.matches, self.rank
